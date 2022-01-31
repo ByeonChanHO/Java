@@ -17,5 +17,35 @@ Static은 java에서 Method(함수)나 Variable(변수)에서 자주 쓰이는�
 
 ### 예시
 ```
-class 
+class example{
+    static int num = 0; //static 변수
+    int num2 =0;        //일반 변수
+
+    public static void output(){    //static 함수
+        System.out.println("Hello~~ static");
+    }
+
+    public void output2(){          //일반 함수
+        System.out.prinln("Hello~~ normal");
+    }
+}
+
+public class example_static{
+
+    public static void main(String[] args){
+
+        example ex_1 = new example();   //첫번째 example class 선언
+        example ex_2 = new example();   //두번째 example class 선언
+
+        ex_1.num++;                     //첫번째 example의 static 변수 num을 1증가
+        ex_1.num2++;                    //첫번째 example의 일반 변수 num2을 1증가
+
+        System.out.println(ex_2.num);   //두번째 example의 static 변수 num 출력
+        System.out.println(ex_2.num2);  //두번째 example의 일반 변수 num2 출력
+
+        example.output();               //class 변수 선언 없이 class의 이름만으로 static함수 호출 가능
+        ex_1.output2();                 //오직 class 변수가 선언하여 일반 함수를 호출해야한다.
+
+    }
+}
 ```
