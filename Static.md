@@ -5,31 +5,31 @@ Static은 java에서 Method(함수)나 Variable(변수)에서 자주 쓰이는�
 
 즉, 이는 Static 을 쓴 함수나 변수는 선언된 지역 안에서 공동으로 쓰여지는 함수나 변수처럼 된다는 뜻이다
 
-### Static 메모리 영역
+### Static 메모리 영역(Static Field)
 + 주로 클래스들이 할당되는 영역
 + Garbage Collector가 관여하지 못한다.
 + 모든 객체가 메모리를 공유한다.
 
-### Heap 메모리 영역
+### Heap 메모리 영역(Non-static Field)
 + 주로 객체들이 할당
 + Garbage Collector가 관여
 + 메모리 공유가 일어나지 않는다.
 
 ### instance vs class
-instance : 메인 class 가 아닌 다른 class 밖에 있는 것.
-class : class 안에 있는 것.
+instance 변수 : Non-static Field
+class 변수 : Static Field
 
 ### 예시
 ```
 class example{
-    static int num = 0; //static 변수
-    int num2 =0;        //일반 변수
+    static int num = 0; //클래스 static 변수
+    int num2 =0;        //클래스 일반 변수
 
-    public static void output(){    //static 함수
+    public static void output(){    //클래스 static 함수
         System.out.println("Hello~~ static");
     }
 
-    public void output2(){          //일반 함수
+    public void output2(){          //클래스 일반 함수
         System.out.prinln("Hello~~ normal");
     }
 }
