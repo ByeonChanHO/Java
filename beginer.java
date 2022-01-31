@@ -1,6 +1,8 @@
-import javax.swing.GroupLayout.Group;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class beginer{ 
+    
     public static void main(String[] args){
 
         //Type Change(형변환)
@@ -112,13 +114,41 @@ public class beginer{
         }
         for(int i = 0; i < Group.length; i++){System.out.println("name1 : " + Group[i]);}
 
+        //input and output(입력과 출력)
+            //import java.utill.Scanner 로 사용자 입력을 받을 수 있다.
+        /*Scanner sc = new Scanner(System.in);
+        int get_sc = sc.nextInt();  //사용자 입력을 받으면 string 형태기에 next형태()해서 받아야 원하는 타입으로 받을 수 있다.
+        System.out.println(get_sc);
+        while(sc.hasNext()){
+            System.out.println(sc.next());
+        }
+        sc.close();*/
+
+            //또는 그냥 System.in으로 하나씩 아스키코드로 받아올 수 있다.
+        /*try {
+            char asc_c = (char)system.in.read();
+            int asc = System.in.read();
+            System.out.println(asc);
+        } catch (IOException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }*/
+
         
-        
 
 
-        
+    }
 
-
-
+    //Method(함수)
+    //array 나 list 은 reference 로 받고 value는 value로 받는다.
+    public static void fun_1(){
+        System.out.println("fun_1");
+    }
+    public static int fun_2(int var){
+        return var;
+    }
+    public static String fun_3(String var){
+        var = "aaa";
+        return var;
     }
 }
