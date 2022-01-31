@@ -15,6 +15,10 @@ Static은 java에서 Method(함수)나 Variable(변수)에서 자주 쓰이는�
 + Garbage Collector가 관여
 + 메모리 공유가 일어나지 않는다.
 
+### instance vs class
+instance : 메인 class 가 아닌 다른 class 밖에 있는 것.
+class : class 안에 있는 것.
+
 ### 예시
 ```
 class example{
