@@ -137,6 +137,8 @@ public class beginner{
         
 
 
+
+
     }
 
     //Method(함수)
@@ -151,4 +153,19 @@ public class beginner{
         var = "aaa";
         return var;
     }
+
+    
+}
+//class(클래스)
+class class_1{
+    private int var1;
+    public int var2;
+    int var3;
+
+    class_1(int var1, int var2, int var3){
+        this.var1 = var1;
+        this.var2 = var2;
+        this.var3 = var3;
+    }
+
 }
