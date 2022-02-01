@@ -136,6 +136,9 @@ public class beginner{
 
         
 
+        //overriding
+        child_ov ov_ex = new child_ov();
+        ov_ex.sum();
 
 
 
@@ -162,10 +165,105 @@ class class_1{
     public int var2;
     int var3;
 
-    class_1(int var1, int var2, int var3){
+    class_1(int var1, int var2, int var3){ //생성자
         this.var1 = var1;
         this.var2 = var2;
         this.var3 = var3;
     }
 
 }
+
+//inheritance(상속)
+    //상속 관계에 놓이게 되면 부모클래스는 기본 생성자(초기화)함수가 존재해야 작동이 된다.
+    //만약 초기화를 사용자가 파라미터를 붙여 만든다면 기본 생성자는 자동으로 생성이 안됨으로
+    //사용자가 알아서 기본 초기화를 만들어 주어야한다.
+class parent{
+    String name;
+    int age;
+    int num_childs;
+
+    parent(){}  //기본 초기화(생성자)
+    parent(String name, int age, int num_childs){
+       this.name = name;
+       this.age = age;
+       this.num_childs = num_childs; 
+    }
+
+    public void scold(){
+        System.out.println("scold childs!");
+    }
+
+    public void compliment(){
+        System.out.println("good job!");
+    }
+}
+
+class child extends parent{
+    String name;
+    int age;
+    String parent_name;
+
+    child(String parent_name, int parent_age, String child_name, int child_age){
+        // parent(parent_name,parent_age, 1);
+        super(parent_name, parent_age, 1);  //부모 클래스의 생성자이다.(파라미터있는 것)
+        super.scold();                      //super 은 부모 클래스를 의미한다.
+        this.name = child_name;
+        this.age = child_age;
+        this.parent_name = parent_name;
+    }
+
+    
+}
+
+//Overriding(오버라이딩)
+    //똑같은 함수 이름으로 이미 존재하는 함수를 재정의하는 것이다.
+    //그 영역에서만 재정의된 함수가 돌아간다.
+    //이름이 같은 함수가 존재할 때 항상 가까운 함수가 실행된다.
+    //overriding 을 하기 위해서는 override 취할 함수의 이름과 타입, 파라미터가 같아야한다.
+    //즉, 함수의 이름과 타입, 파라미터가 동일한 것을 선언해 재정의한 것이다.
+class parent_ov{
+    int left;
+    int right;
+    parent_ov(){
+        this.left = 1;
+        this.right = 2;
+    }
+    void sum(){
+        System.out.println("부모 sum : " + (this.left+this.right));
+    }
+} 
+class child_ov extends parent_ov{
+
+    //override 로 아들 class로 sum을 실행시 아들클래스로 정의된 sum이 출력된다.
+    @Override
+    void sum(){
+        System.out.println("아들 sum : " + (this.left+this.right));
+    }
+}
+
+//overloading(오버로딩)
+    //같은 이름으로 다른 파라미터 형태, 개수로 선언
+    //return 값의 타입은 같아야한다.
+    //즉, 함수의 타입과 이름이 같아야하고 파라미터가 다른 것을 오버로딩이라고 한다.
+class parent_load{
+    void scold(){System.out.println("scold");}
+    void scold(int i){for(int k = 0; k < i; k++){System.out.println("scold");}}
+
+}
+
+//Class Path
+    //java 파일에 코드를 적고 cmd 에서 "javac 파일이름.java" 를 실행 시키면 comfile하여 안에 있는 코드의 class들이 설정된 경로에 생성이 된다.
+    //그 후 public static main(String[] args){}을 가지고 있는 class 를 cmd에서 "java 클래스이름" 을 실행 시키면 실제 java에서 code 실행하듯이 된다..
+    //하지만 main에서 쓰는 다른 class가 지정된 경로에 없으면 cmd에 "java -classpath ".;폴더이름" 실행시킬 클래스이름" 방식을 써서 실행시키면 된다.
+    // ".;lib" 에서 .은 현재 경로에서 찾아보라는 뜻이고 ;은 없으면 lib에서 찾아보라는 뜻이다.
+    //제일 편한 방법은 환경변수에 path 설정하면 됨.
+
+
+//package(패키지)
+    //클래스 여러개가 모여 생성되는 것
+    //"package 경로" 로 불러오거나 "import 경로" 로 불러오면 된다.
+    // ex) package javatutorials.java          import. javatutorials.java.beginner.java
+    // 두개의 package 에서 class의 이름이 같은 걸 발견했을 떄 구분지어주는 방법은 경로와 함께 class를 쓰면 된다.
+    
+    
+
