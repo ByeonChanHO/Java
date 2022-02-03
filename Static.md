@@ -20,7 +20,7 @@ instance 변수 : Non-static Field
 class 변수 : Static Field
 
 ### 예시
-```
+```java
 class example{
     static int num = 0; //클래스 static 변수
     int num2 =0;        //클래스 일반 변수

@@ -283,7 +283,7 @@ class acess_modifier{
     //즉, 추상화된 클래스를 상속하게 되면 반드시 부모 클래스에 선언된 추상화들을 자식 클래스에서 Overriding으로 재정의 해주어야한다.
     //글쓰는 양식이라고 생각하면 된다.
     //목적 : 양식대로 만들라고.
-    //주의 : 추상화된 class나 method은 선언 및 사용을 못한다.
+    //주의 : 추상화된 class나 method은 생성을 못한다.
     abstract class Abstract_parent{
         public abstract String ex();
     }

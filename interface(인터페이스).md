@@ -12,12 +12,18 @@
 interface는 abstract(추상화)와 같이 양식(기본 틀)을 제공하면서, 다른 클래스 사이의 중간 매개 역할까지 담당하는 일종의 추상 클래스이다.
 
 ## 주의점
-+ Abstract class 처럼 instance(인스턴스)에 선언(생성)을 하지 못한다.
++ Abstract class 처럼 instance(인스턴스)에 생성을 하지 못한다.
 + interface 안에 Method(메소드)를 만들 때 전부 abstract(추상화)가 아니라면 Method 앞에 abstract를 붙이는 게 좋다.
 
 ## 사용처
 + Constant (상수)
 + Abstract Method(추상 메소드)
+
+## 사용법
+```java
+interface name {void method();}
+class A implements name{}
+```
 
 ## 예시
 + ### 구현
@@ -35,7 +41,7 @@ class father implements parent{
     }
 }
 
-public class excute{//실행 문
+public class interface_excute{//실행 문
     public static void main(String[] agrs){
         mother A = new motehr()
         father B = new father()
