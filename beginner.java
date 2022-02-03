@@ -266,4 +266,34 @@ class parent_load{
     // 두개의 package 에서 class의 이름이 같은 걸 발견했을 떄 구분지어주는 방법은 경로와 함께 class를 쓰면 된다.
     
     
+//Access Modifier(접근 제어자)
+class acess_modifier{
+    private String priv = "오직 같은 클래스안에 있어야 이를 접근할 수 있다.";
+    public String pub = "모든 곳에서 접근이 가능";
+    protected String pro = "상속 관계이면 불러올 수 있다.";
+    String defa = "같은 클래스,패키지만 접근 가능";
+    //클래스 또한 public과 defalt 가 있는데. public은 모두 쓸 수 있는 것이고 defalt 는 같은 패키지에서만 쓸 수 있는 class 다.
+    //단, package나 import 로 불러와야 같은 패키지내에서 defalut class를 쓸 수 있다.
+    //다른 패키지에 있는 defalut class는 불러와도 쓰지 못한다.
+    //하나의 소스코드 안에는 하나의 public class만 있어야한다.(소스코드 이름과 public class 이름이 같아야한다.)
+}
 
+//Abstract(추상화)
+    //자식 클래스에서 추상화된 부모 클래스 코딩 양식대로 오버라이딩(Overriding)을 하게 만드는 것을 말한다.
+    //즉, 추상화된 클래스를 상속하게 되면 반드시 부모 클래스에 선언된 추상화들을 자식 클래스에서 Overriding으로 재정의 해주어야한다.
+    //글쓰는 양식이라고 생각하면 된다.
+    //목적 : 양식대로 만들라고.
+    //주의 : 추상화된 class나 method은 선언 및 사용을 못한다.
+    abstract class Abstract_parent{
+        public abstract String ex();
+    }
+    class Abstract_child extends Abstract_parent{
+        public String ex(){
+            return "OMG";
+        }
+    }
+
+
+
+
+    
