@@ -44,11 +44,15 @@ RuntimeException 은 Runtime 도중 발생되는 예외로 주로 개발자의 �
 
 try를 기본으로 하여 부가적으로 catch나 finally를 추가한다.
 
-(try/catch, try/catch ,try/finally)
+**(try/catch, try/catch ,try/finally)**
 + **try :** 먼저 실행되는 코드로 try에서 예외 발생시 throw 하여 catch로 란다.
 + **catch :** 예외 코드나 예외 객체를 인수 받아 처리
 + **finally :** try에 예외가 발생하든 말든 상관없이 마지막에 실행 되는 부분.
 
+**(throw 예외이름)**
+throw 는 예외이름과 같은 예외가 떴을 경우 말 그대로 그 예외를 던진다는 의미 
+
+함수 옆에 throw 쓰면 그 예외는 그 함수가 아닌 전 단계의 함수로 처리를 떠넘긴다는 뜻을 가지고 있다.
 
 
 
