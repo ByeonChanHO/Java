@@ -11,6 +11,7 @@
 
 List, Set은 Collection interface에 상속 받지만, map은 구조상의 이유로 별도의 interface로 구성되어 있다.
 
+![화면 캡처 2022-02-04 170834](https://user-images.githubusercontent.com/38696775/152494080-db246254-6c15-4bab-9d71-461903befddc.png)
 
 
 
