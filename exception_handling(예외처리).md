@@ -17,7 +17,8 @@ exception는 오류와 마찬가지로 실행 중인 프로그램을 비정상�
 예측 및 원하지 않은 이벤트가 발생할 때 처리하는 것을 말한다.
 
 ## exception의 종류
-![화면 캡처 2022-02-03 185130](https://user-images.githubusercontent.com/38696775/152319839-74e3f838-6496-412e-94eb-d4636222c2f7.png){: width="60%" height="60%"}
+![화면 캡처 2022-02-03 185130](https://user-images.githubusercontent.com/38696775/152319839-74e3f838-6496-412e-94eb-d4636222c2f7.png)
+<img src="https://user-images.githubusercontent.com/38696775/152319839-74e3f838-6496-412e-94eb-d4636222c2f7.png  width="60%" height="60%"/>
 
 출처 : http://www.tcpschool.com/java/java_exception_class
 
