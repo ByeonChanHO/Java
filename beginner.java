@@ -295,6 +295,4 @@ class acess_modifier{
 
 
 
-
-
     
