@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class beginner{ 
@@ -139,6 +140,18 @@ public class beginner{
         //overriding
         child_ov ov_ex = new child_ov();
         ov_ex.sum();
+
+
+        ArrayList<Integer> arrList = new ArrayList<Integer>();
+        arrList.add(40);
+        arrList.add(30);
+        arrList.add(20);
+        arrList.add(10);
+
+        arrList.set(0, 20);
+        for (int e : arrList) {
+            System.out.print(e + " ");
+        }
 
 
 
